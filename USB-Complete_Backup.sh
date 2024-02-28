@@ -79,7 +79,7 @@ git_dir=/mnt/USB-BACKUP-01/Code_Repos/Git/
 mkdir "$csvn_dir"
 mkdir "$git_dir"
 cp -r /mnt/data/dbprod/Code_Repos/Csvn/Daily_Backup/"$one_day" "$csvn_dir"
-cp -r /mnt/data/dbprod/Code_Repos/git/Daily_Backup/"$one_day" "$git_dir"
+cp -r /mnt/data/dbprod/Code_Repos/Git/Daily_Backup/"$one_day" "$git_dir"
 # Log end time for the entire backup process
 backup_end_time=$(date +'%Y-%m-%d %H:%M:%S')
 log_message "Backup process completed. End time: $backup_end_time"
