@@ -150,8 +150,8 @@ if [ $? -eq 0 ]; then
         available_size=$(echo "$disk_usage" | awk 'NR==2 {print $4}')
         echo "<tr align=center><td colspan='4'><b>Retention Policy</b></td></tr>" >>"$bckreport"
         echo "<tr><td><b>Local Backup Count</b></td> <td align=center>$local_count</td><td><b>Local Backup Size</b></td> <td align=center>$local_size</td></tr>" >>"$bckreport"
-        echo "<tr><td><b>Remote Count(Daily)</b></td> <td align=center>$directory_daily_count</td><td><b>Local Backup Size</b></td> <td align=center>$remote_daily_size</td></tr>" >>"$bckreport"
-        echo "<tr><td><b>Remote Count(Weekly)</b></td> <td align=center>$directory_week_count</td><td><b>Local Backup Size</b></td> <td align=center>$remote_week_size</td></tr>" >>"$bckreport"
+        echo "<tr><td><b>Remote Count(Daily)</b></td> <td align=center>$directory_daily_count</td><td><b>Remote Backup Size</b></td> <td align=center>$remote_daily_size</td></tr>" >>"$bckreport"
+        echo "<tr><td><b>Remote Count(Weekly)</b></td> <td align=center>$directory_week_count</td><td><b>Remote Backup Size</b></td> <td align=center>$remote_week_size</td></tr>" >>"$bckreport"
         echo "<tr><td><b>Remote Disk Size</b></td> <td align=center>$total_disk_size</td><td><b>Remote Available Size</b></td> <td align=center>$available_size</td></tr>" >>"$bckreport"
         
         backup_end_time=$(date +%s)
